@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="1"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/moveFile">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/mainDisplay"
+                    android:layout_width="match_parent"
+                    android:layout_height="61dp"
+                    android:layout_above="@+id/correctionOfMistakes"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="TextView"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <Button
+            android:id="@+id/startTestActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="START TESTING"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"></Button>
+
+        <Button
+            android:id="@+id/openFile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SELECT FILE WITH QA"
+            android:layout_above="@+id/startTestActivity"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Switch
+            android:id="@+id/shuffleQ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:gravity="start"
+            android:splitTrack="false"
+            android:switchMinWidth="@android:dimen/notification_large_icon_width"
+            android:text=" s h u f f l e   questions"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:layout_above="@+id/shuffleA"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Switch
+            android:id="@+id/shuffleA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:gravity="start"
+            android:splitTrack="false"
+            android:switchMinWidth="@android:dimen/notification_large_icon_width"
+            android:text=" shuffle     a n s w e r s"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:layout_above="@+id/moveFile"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Switch
+            android:id="@+id/correctionOfMistakes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_above="@+id/shuffleQ"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:gravity="start"
+            android:splitTrack="false"
+            android:switchMinWidth="@android:dimen/notification_large_icon_width"
+            android:text="c o r r e c t i o n   of    mistakes\n       after     E   N   D"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+        <Button
+            android:id="@+id/moveFile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MOVE FILE"
+            tools:clickable="true"
+            android:layout_above="@+id/openFile"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+</LinearLayout>
